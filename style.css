@@ -39,7 +39,7 @@ section {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -119,6 +119,10 @@ span {
     color: var(--main-color);
 }
 
+.span-datos {
+    font-size: 5.6rem;
+}
+
 .home-content h1 {
     font-size: 5.6rem;
     font-weight: 700;
@@ -173,7 +177,7 @@ span {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .about-img {
@@ -346,7 +350,7 @@ span {
 }
 
 .portfolio {
-    background: var(--bg-color);
+    background: var(--second-bg-color);
 }
 
 .portfolio h2 {
