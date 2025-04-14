@@ -305,16 +305,18 @@ span {
 }
 
 
+/* Enhanced Skills Section */
 .skills {
     background: var(--second-bg-color);
-    padding: 5rem 9%;
+    padding: 10rem 9%;
     text-align: center;
 }
 
 .skills-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    /* Makes boxes equal height */
     flex-wrap: wrap;
     gap: 2rem;
 }
@@ -322,31 +324,162 @@ span {
 .skills-box {
     flex: 1 1 30rem;
     background: var(--bg-color);
-    padding: 3rem;
+    padding: 3rem 2rem;
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--main-color);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .skills-box:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 2rem var(--main-color);
     border-color: var(--main-color);
 }
 
 .skills-box i {
-    font-size: 7rem;
+    font-size: 6rem;
     color: var(--main-color);
+    margin-bottom: 1.5rem;
 }
 
 .skills-box h3 {
-    font-size: 2.6rem;
-    margin: 2rem 0;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
 }
 
-.skills-box p {
+/* New styles for detailed content */
+.skills-details {
+    text-align: left;
+    flex-grow: 1;
+    padding: 0 1rem;
+}
+
+.skill-category {
+    margin-bottom: 1.8rem;
+}
+
+.skill-category h4 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.skill-category p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #d1d1d1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .skills-box {
+        flex: 1 1 25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        padding: 8rem 3%;
+    }
+
+    .skills-box {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .skills-box i {
+        font-size: 5rem;
+    }
+
+    .skills-box h3 {
+        font-size: 2.2rem;
+    }
+
+    .skill-category h4 {
+        font-size: 1.4rem;
+    }
+
+    .skill-category p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .skills-box {
+        flex: 1 1 100%;
+    }
+}
+
+/* CERTIFICATES SECTION - Matching Skills Style */
+.certificates {
+    background: var(--second-bg-color);
+    padding: 10rem 9% 5rem;
+    min-height: auto;
+    text-align: center;
+}
+
+.certificates h2 {
+    margin-bottom: 5rem;
+    font-size: 4.5rem;
+}
+
+.certificates h2 span {
+    color: var(--main-color);
+}
+
+.certificates-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.certificate-box {
+    flex: 1 1 30rem;
+    background: var(--bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--main-color);
+    transition: transform 0.3s ease;
+    min-height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.certificate-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.certificate-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.certificate-box h3 {
+    font-size: 2.6rem;
+    margin: 1rem 0;
+}
+
+.certificate-box p {
     font-size: 1.6rem;
-    margin: 1rem 0 3rem;
+    margin: 1rem 0 2rem;
+    color: var(--text-color);
+}
+
+.certificate-box .btn {
+    margin-top: auto;
+    padding: 1rem 2.8rem;
+    font-size: 1.6rem;
 }
 
 .portfolio {
@@ -584,6 +717,43 @@ span {
 
     .about-img img {
         width: 90vw;
+    }
+
+
+    /* BREAKPOINTS - Matching existing responsive design */
+    @media (max-width: 1200px) {
+        .certificate-box {
+            flex: 1 1 25rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .certificates {
+            padding: 8rem 3% 4rem;
+        }
+
+        .certificate-box {
+            flex: 1 1 100%;
+            min-height: 30rem;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .certificates h2 {
+            font-size: 3.5rem;
+        }
+
+        .certificate-box {
+            padding: 2.5rem 1.5rem;
+        }
+
+        .certificate-box i {
+            font-size: 5rem;
+        }
+
+        .certificate-box h3 {
+            font-size: 2.2rem;
+        }
     }
 
     .footer {
